@@ -1,6 +1,7 @@
 # Park & Ride - Smart Parking and Ride Booking System
 
-A full-stack application designed to streamline urban commuting by enabling users to reserve parking slots near metro stations, book last-mile rides, and manage slots through an admin dashboard.
+A full-stack application designed to streamline urban commuting by enabling users to reserve parking slots near metro stations, book last-mile rides, and Live Tracking.
+
 
 ---
 
