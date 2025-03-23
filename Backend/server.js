@@ -18,6 +18,12 @@ app.use(express.json());
 
 
 connectDB();
+app.use("/api/auth", authRoutes);
+app.use("/api/booking", bookingRoutes);
+app.use("/api/parking", parkingRoutes);
+app.use("/api/ride", rideRoutes);
+app.use("/api/admin", adminRoutes);
+
 
 
 
