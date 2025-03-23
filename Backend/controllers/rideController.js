@@ -1,6 +1,6 @@
 const Ride = require("../models/Ride");
 
-// 📌 1️⃣ Book a Ride
+// Book a Ride
 exports.bookRide = async (req, res) => {
   try {
     const { rideType, pickupLocation, dropLocation, distance, price } = req.body;
@@ -25,7 +25,7 @@ exports.bookRide = async (req, res) => {
   }
 };
 
-// 📌 2️⃣ Get User's Ride History
+// Get User's Ride History
 exports.getRideHistory = async (req, res) => {
   try {
     const rides = await Ride.find({ userId: req.user.id }).sort({ createdAt: -1 });
@@ -36,7 +36,7 @@ exports.getRideHistory = async (req, res) => {
   }
 };
 
-// 📌 3️⃣ Cancel a Ride
+//Cancel a Ride
 exports.cancelRide = async (req, res) => {
   try {
     const ride = await Ride.findOne({ _id: req.params.id, userId: req.user.id });
@@ -53,7 +53,7 @@ exports.cancelRide = async (req, res) => {
   }
 };
 
-// 📌 4️⃣ Complete a Ride (Admin or Driver action)
+// Complete a Ride (Admin or Driver action)
 exports.completeRide = async (req, res) => {
   try {
     const ride = await Ride.findById(req.params.id);
